@@ -1,4 +1,9 @@
-/* USAGE EXAMPLE
+/* 
+
+http://expressjs.com/en/guide/using-middleware.html#using-middleware
+
+USAGE EXAMPLE
+--------------
 const middleware = new Middleware()
 middleware.use((req, next) => {
    req.a = 1
