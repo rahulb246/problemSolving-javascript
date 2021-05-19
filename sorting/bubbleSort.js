@@ -4,19 +4,19 @@
 // average : O(n^2), O(1)
 // worst : O(n^2), O(1)
 function bubbleSort(array) {
-  // Write your code here.
-	let sorted = 0;
-	for (let i=0; i<array.length; i++) {
-		if (sorted) return array;
-		sorted = 1;
-		for (let j=0; j<array.length-i; j++) {
-			if (array[j] > array[j+1]) {
-				const temp = array[j];
-				array[j] = array[j+1];
-				array[j+1] = temp;
-				sorted = 0;
-			}
-		}
-	}
-	return array;
+  let swapped = true;
+  let arrSize = arr.length;
+  while (swapped) {
+    swapped = false;
+    for (let i=0; i<arrSize-1; i++) {
+      if (arr[i] > arr[i+1]) {
+        let temp = arr[i+1];
+        arr[i+1] = arr[i];
+        arr[i] = temp;
+        swapped = true;
+      }
+    }
+    arrSize = arrSize-1;
+  }
+  return arr;
 }
