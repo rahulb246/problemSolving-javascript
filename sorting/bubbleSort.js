@@ -3,7 +3,7 @@
 // best : O(n), O(1)
 // average : O(n^2), O(1)
 // worst : O(n^2), O(1)
-function bubbleSort(array) {
+function bubbleSort(arr) {
   let swapped = true;
   let arrSize = arr.length;
   while (swapped) {
