@@ -6,6 +6,7 @@ https://www.npmjs.com/package/classnames
 function classNames(...args) {
     let classes = '';
     for (let arg of args) {
+        // process only if arg is truthy value 
         if (arg) {
             let newClasses = processArg(arg);
             classes = appendClasses(classes, newClasses);
@@ -29,6 +30,7 @@ function processArg(arg) {
   
     let classes = '';
     for (let key in arg) {
+        // avoid checking in prototype chain by checking if key is own property
         if (arg.hasOwnProperty(key) && arg[key]) {
             let newClasses = processArg(key);
             classes = appendClasses(classes, newClasses);
